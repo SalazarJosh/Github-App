@@ -160,8 +160,37 @@ text {
   text-align: center;
 }
 
+.contentArea4 {
+  background-color: #040d21;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.contentArea5 {
+  background-color: #0a1828;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.contentArea6 {
+  background-color: #192d42;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+}
+
 .margin-top200 {
   margin-top: 200px;
+}
+
+.margin-top100 {
+  margin-top: 100px;
+}
+
+.margin-top250 {
+  margin-top: 250px;
 }
 
 .margin-bottom100 {

@@ -1,4 +1,4 @@
-gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin, MotionPathPlugin);
+gsap.registerPlugin(ScrollTrigger);
 
 const tl = gsap.timeline({
   scrollTrigger: {
@@ -158,3 +158,33 @@ window.onscroll = function(e) {
     console.log("2");
   }
 }
+
+var quotes = [
+  "&ldquo;Overall wonderful professor. I learned a lot during this class and I have a lot of respect for web developers because I could never do it! Josh, you helped me learn more than I thought I could. Thank you! A++&rdquo; <span style='color: #fff; font-style: normal; font-size: 1.4rem;'> - Fall 2018</span>",
+  "&ldquo;Very encouraging on letting our ideas become reality. Knows what he's talking about on every aspect of the course resources. 10/10 prof!&rdquo; <span style='color: #fff; font-style: normal; font-size: 1.4rem;'> - Fall 2018</span>",
+  "&ldquo;I feel like I learned a lot in this course, one of the best professors I have had!&rdquo; <span style='color: #fff; font-style: normal; font-size: 1.4rem;'> - Spring 2018</span>",
+  "&ldquo;Very professional and organized content well. Helps students individually.&rdquo; <span style='color: #fff; font-style: normal; font-size: 1.4rem;'> - Spring 2018</span>",
+  "&ldquo;Knew a lot about the subject and was very enthusiastic and helpful.&rdquo; <span style='color: #fff; font-style: normal; font-size: 1.4rem;'> - Spring 2017</span>"
+]
+
+var currentQuote = 0;
+
+setInterval(function() {
+  GetNewQuote()
+}, 10000);
+
+function GetNewQuote() {
+  $(".quotes").fadeOut("slow", function() {
+    $(".quotes").empty();
+    $(".quotes").append(quotes[currentQuote]);
+    currentQuote++;
+
+    if (currentQuote > quotes.length - 1) {
+      currentQuote = 0;
+    }
+    $(".quotes").fadeIn("slow", function() {});
+  });
+
+}
+
+GetNewQuote();
