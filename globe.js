@@ -1,37 +1,46 @@
-var scene3d = $(".container");
-var CANVAS_WIDTH = 900;
-var CANVAS_HEIGHT = 900;
+container = document.getElementById('canvas');
 
-//Setup Scene
+//SETUP SCENE
 const scene = new THREE.Scene();
 scene.background = new THREE.Color(0x040d21);
 
-//Setup Camera
-const camera = new THREE.PerspectiveCamera(75, CANVAS_WIDTH / CANVAS_HEIGHT, 0.1, 1000);
-camera.position.z = 5;
-
-//Setup Renderer
+//SETUP RENDERER
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize(900, 900);
-renderer.setSize(window.innerWidth, window.innerHeight);
+document.body.appendChild(renderer.domElement);
 
-//Setup Geometry
-const geometry = new THREE.SphereGeometry(2, 64, 64);
-const material = new THREE.MeshBasicMaterial({
-  color: 0x262e76
+//SETUP GEOMETRY
+//setuphalo
+const haloGeometry = new THREE.SphereGeometry(2.1, 64, 64);
+const haloMaterial = new THREE.MeshBasicMaterial({
+  color: 0x0000ff
 });
-const sphere = new THREE.Mesh(geometry, material);
+const halo = new THREE.Mesh(haloGeometry, haloMaterial);
+halo.scale.multiplyScalar(1.15);
+halo.rotateX(Math.PI * 0.03);
+halo.rotateY(Math.PI * 0.03);
+scene.add(halo);
+//setup globe
+const sphereGeometry = new THREE.SphereGeometry(2, 64, 64);
+const sphereMaterial = new THREE.MeshBasicMaterial({
+  color: 0x1f285e
+});
+const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
 scene.add(sphere);
 
-function animate() {
+
+//SETUP camera
+const camera = new THREE.PerspectiveCamera(75, 900 / 900, 0.1, 1000);
+camera.position.z = 5;
+
+//ANIMATION LOOP
+const animate = function() {
   requestAnimationFrame(animate);
 
   sphere.rotation.y += 0.001;
 
   renderer.render(scene, camera);
-}
-animate();
+  container.appendChild(renderer.domElement);
+};
 
-$(window).resize(function() {
-  renderer.setSize(window.innerWidth, window.innerHeight);
-});
+animate();
