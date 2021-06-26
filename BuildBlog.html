@@ -1,0 +1,396 @@
+<html lang="en">
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-132375442-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag()
+    {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-132375442-1');
+  </script>
+
+  <meta charset="utf-8">
+
+  <title>GitHub App Build Blog</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <style type="text/css">
+    body
+    {
+      color: #333;
+    }
+
+    h1
+    {
+      font-size: 2rem;
+    }
+
+    h2
+    {
+      font-size: 1.7rem;
+    }
+
+    h3
+    {
+      font-size: 1.4rem;
+      font-weight: 500;
+    }
+
+    .blogBox
+    {
+      background-color: #fff;
+      border-radius: 2px;
+      padding: 15px;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    }
+
+    .date
+    {
+      color: #ccc;
+      margin-bottom: 15px;
+    }
+
+    .wip
+    {
+      color: #D32F2F;
+    }
+
+    .header
+    {
+      background-image: url("images/full.png");
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-size: cover;
+      width: 100%;
+      height: 200px;
+    }
+
+    .colors
+    {
+      background-image: url("images/colors.png");
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-size: auto;
+
+      width: auto;
+      height: 66px;
+      margin: 15px 0;
+    }
+
+    .headerLayers
+    {
+      background-image: url("images/layeredvisual.png");
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-size: contain;
+      width: 100%;
+      height: 200px;
+      margin: 15px 0;
+    }
+
+    .text-sections
+    {
+      background-image: url("images/text-sections.png");
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-size: cover;
+      width: 100%;
+      height: 200px;
+    }
+
+    .globePreview
+    {
+      background-image: url("images/globepreview.png");
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-size: cover;
+      width: 100%;
+      height: 200px;
+    }
+
+    .studentQuotes
+    {
+      background-image: url("images/studentquotes.png");
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-size: cover;
+      width: 100%;
+      height: 200px;
+    }
+
+    .noPadding
+    {
+      padding: 0;
+    }
+
+    pre
+    {
+      background-color: #ddd;
+      border: 1px solid #777;
+    }
+
+    code
+    {
+      font-family: monospace;
+    }
+  </style>
+</head>
+
+<body style="background-color: #eee;">
+  <div class="main">
+    <div class="container" style="margin-top: 50px; margin-bottom: 50px;">
+      <div class="row">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-8">
+          <div class="blogBox">
+            <strong>
+              <p class="wip">THIS IS STILL A WORK IN PROGRESS.</p>
+            </strong>
+            <small class="date">June 25th 2021</small>
+            <h1 style="margin-top: 15px;">GitHub App Dev Blog</h1>
+            <div class="row">
+              <div class="col-md-10">
+                <h2 style="margin-top:20px;">Introduction</h2>
+                <div style="width: 100%; height: 1px; background-color: #ddd; border-radius: 3px; margin-bottom: 15px;"></div>
+
+                <p>I put this together to showcase how I built the <a href="github-app.html">github application</a> webpage. I saw a couple of positions open at GitHub that really caught my eye&mdash;A Senior Design Engineer and a Senior Software
+                  Engineer for accessibility. In the Senior Design Engineer posting, there was a link to <a href="https://github.blog/tag/homepage-design/">their blog series on their homepage design</a>. And that's when I got really excited about the
+                  possibility of working for Github.</p>
+
+                <p>Another point in that same job posting stated "4+ years of experience crafting engaging experiences with HTML, CSS, and JavaScript. We expect that you’ll stretch this definition.". And stretch I did.
+                </p>
+
+                <p>My goal for this webpage was sort of autobiographical in
+                  nature. I wanted to showcase my abilities while also telling a story about myself. My portfolio website is nice, but it's not really curated for anyone in particular. Instead, I wanted to create something unique.</p>
+
+                <p>The biggest challenge I faced with this was wanting to create something that would catch their eye, but wouldn't take me too long to create. I had to carefully balance "good enough" with "not enough" every step of the way. I didn't
+                  know if the job postings would disappear soon.</p>
+
+                <p>In all, the webpage took me about 3 coffee-filled days to complete.</p>
+
+                <h2 style="margin-top:20px;">Creating the Header</h2>
+                <div style="width: 100%; height: 1px; background-color: #ddd; border-radius: 3px; margin-bottom: 15px;"></div>
+                <div class="full-width-image header"></div>
+                <p style="margin-top: 15px;">To start my story, I wanted to set the stage by showing a bit about myself. I created this layered image in Photoshop to show my passion for adventure and the outdoors. I recently, and for the first time
+                  in my life, visited the Pacific Northwest. I went to Portland to speak at a conference and I remember Mt. Hood being perfectly framed in the airplane window as we descended into PDX. That was my inspiration for this piece.</p>
+
+                <p>The color palette would also set the mood for the design throughout the rest of the page.</p>
+
+                <div class="full-width-image colors"></div>
+
+                <p>I really wanted the first thing they saw to be as eye-catching as possible. I used <a href="https://greensock.com/">GreenSock</a> and their <a href="https://greensock.com/scrolltrigger/">ScrollTrigger</a> plugin to make the
+                  parallax effect.</p>
+
+                <pre>
+                <code>const tl = gsap.timeline({
+                  scrollTrigger: {
+                    trigger: ".header",
+                    start: "-5px top",
+                    end: "bottom top",
+                    scrub: true,
+                    //toggleClass: "active"
+                  }
+                });
+                
+                gsap.utils.toArray(".parallax").forEach(layer => {
+                  const depth = layer.dataset.depth;
+                  const movement = -(layer.offsetHeight * depth)
+                  tl.to(layer, {
+                    y: movement,
+                    ease: "none"
+                  }, 0)
+                });
+              </code>
+              </pre>
+
+                <p>Each layer in the HTML has a data-depth attribute that is used to calculate the vertical movement speed.</p>
+
+                <div class="full-width-image headerLayers"></div>
+
+                <h2 style="margin-top:20px;">Text Sections</h2>
+                <div style="width: 100%; height: 1px; background-color: #ddd; border-radius: 3px; margin-bottom: 15px;"></div>
+                <div class="full-width-image text-sections"></div>
+
+                <p style="margin-top: 15px;">Each section is using GreenSock to animate the slide effect from the left and right. Since I started the page with parallax motion, I thought it was important to keep motion throughout the page. The code
+                  to make this
+                  function was derived from an example they had on their page. What I like about this solution is the animation triggers when scrolling up or down. My initial Jquery implementation only animated when first seeing the element.</p>
+
+                <pre>
+                    <code>
+                  function animateFrom(elem, direction) {
+                    direction = direction || 1;
+                    var x = 0,
+                      y = direction * 100;
+                    if (elem.classList.contains("gs_reveal_fromLeft")) {
+                      x = -100;
+                      y = 0;
+                    } else if (elem.classList.contains("gs_reveal_fromRight")) {
+                      x = 100;
+                      y = 0;
+                    }
+                    elem.style.transform = "translate(" + x + "px, " + y + "px)";
+                    elem.style.opacity = "0";
+                    gsap.fromTo(elem, {
+                      x: x,
+                      y: y,
+                      autoAlpha: 0
+                    }, {
+                      duration: 3.25,
+                      x: 0,
+                      y: 0,
+                      autoAlpha: 1,
+                      ease: "expo",
+                      overwrite: "auto"
+                    });
+                  }
+                </code>
+              </pre>
+                <p> I repurposed <a href="https://codepen.io/joshsalazar/pen/PXaLNG">a Pen I created</a> a long time ago as part of a CSS challenge for the day/night cylce pyramid piece. The
+                  animation is pure css using keyframes and the animate property. My goal was to showcase as broad of an understanding of the web as possible by repurposing previous projects I've created.
+                <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="PXaLNG" data-user="joshsalazar"
+                  style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                  <span>See the Pen <a href="https://codepen.io/joshsalazar/pen/PXaLNG">
+                      100DayCSS#003</a> by Joshua Salazar (<a href="https://codepen.io/joshsalazar">@joshsalazar</a>)
+                    on <a href="https://codepen.io">CodePen</a>.</span>
+                </p>
+                <p style="margin-top: 15px;">The trickiest part with this was rewriting the positioning of each HTML element to get it working on the page. The parent-child relationships of css positioning is always a nightmare.</p>
+
+                <h3>Intermittent Thoughts</h3>
+                <p style="margin-top: 15px;">By this point, my code was looking pretty messy. Not only was I trying to use several different JavaScript libraries, I was also trying to get this done before the job posting expired. I mean, seriously,
+                  take a quick look at <a href="https://github.com/indijosh/Github-App">the repo</a> and you'll see what I'm talking about. I could only hope they didn't review the cleanliness of my code when considering my application.</p>
+
+                <p>Despite the inconsitent variable naming and casing, in-line styles competing with external, Bootstrap overwrites, convoluted and inconsitent SCSS structure, I was still making progress. I also spent a considerable amount of time
+                  experimenting with features that didn't make the cut. The ghosts of their code still live in the project. At one point, I had an SVG animation showcasing a timeline of my work and education history but it didn't seem to fit the
+                  narrative so I ditched it. <em>(Sort of. It's just commented out)</em></p>
+
+                <h2 style="margin-top:20px;">Globe</h2>
+                <div style="width: 100%; height: 1px; background-color: #ddd; border-radius: 3px; margin-bottom: 15px;"></div>
+                <div class="full-width-image globePreview"></div>
+                <p style="margin-top:15px;">Oh boy was this one fun. As I mentioned earlier, I read <a href="https://github.blog/tag/homepage-design/">GitHub's blog post about their homepage design</a>. In that series they share some details of how
+                  they built the globe in <a href="https://github.blog/2020-12-21-how-we-built-the-github-globe/">this article</a>. I couldn't get over how cool this post was and, like I said before, I really wanted to stand out. So I thought I would
+                  do my best
+                  to use the same JavaScript three.js library to recreate their globe as best I could with the time I had.</p>
+
+                <p>The hardest part was recreating the atmosphere. On their post they mentioned they used a slightly offset sphere with a custom shader to get the atmospheric effect. I've never created a custom shader in three.js so it took some
+                  time to figure that out and get it looking right.</p>
+                <pre>
+                    <code>
+                      const atmosphereShader = {
+                        'atmosphere': {
+                          uniforms: {},
+                          vertexShader: [
+                            'varying vec3 vNormal;',
+                            'void main() {',
+                            'vNormal = normalize( normalMatrix * normal );',
+                            'gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );',
+                            '}'
+                          ].join('\n'),
+                          fragmentShader: [
+                            'varying vec3 vNormal;',
+                            'void main() {',
+                            'float intensity = pow( 0.99 - dot( vNormal, vec3( 0, 0, 1.0 ) ), 6.0 );',
+                            'gl_FragColor = vec4( .28, .48, 1.0, 1.0 ) * intensity;',
+                            '}'
+                          ].join('\n')
+                        }
+                      }
+                    </code>
+                  </pre>
+                <p>Once the atmosphere was set, I wanted to quickly recreate the dots for the land. Instead of rendering an individual mesh for each dot and calculating the global positioning, I ended up applying a texture to another, slightly
+                  larger,
+                  sphere. On GitHub's globe I noticed the dots glow even in the shadowed regions of earth. To mimic this I made the texture ignore light and shadow.</p>
+
+                <p>Finally, I wrote a script to get the mouse movement within the canvas while the mouse button is pressed. I took the difference of movement on the x axis to calculate the rotation of the sphere on its global y axis. GitHub's globe
+                  allows for rotation on the x and y axis and has some smoothing applied, but I had to move along after getting just the x axis working.</p>
+
+                <pre>
+                  <code>
+                    var isDragging = false;
+                    var previousMousePosition = {
+                      x: 0,
+                      y: 0
+                    };
+                    $("#canvas").on('mousedown', function(e) {
+                        isDragging = true;
+                      })
+                      .on('mousemove', function(e) {
+                        //console.log(e);
+                        var deltaMove = {
+                          x: e.offsetX - previousMousePosition.x
+                        };
+                    
+                        if (isDragging) {
+                          sphere.rotation.y += deltaMove.x * .004;
+                        }
+                    
+                        previousMousePosition = {
+                          x: e.offsetX,
+                          y: e.offsetY
+                        };
+                      });
+                    
+                    
+                    $(document).mouseup(function() {
+                      isDragging = false;
+                    });
+                    
+                    $("#canvas").mouseout(function() {
+                      isDragging = false;
+                    });
+                  </code>
+                </pre>
+
+                <h2>Student Quotes</h2>
+                <div style="width: 100%; height: 1px; background-color: #ddd; border-radius: 3px; margin-bottom: 15px;"></div>
+                <div class="full-width-image studentQuotes"></div>
+                <p>This section is pretty straightforward technologically speaking. I simply loop through an array of quotes from some of my previous students. The art, though, that was fun!</p>
+                <p> I initially intended this to be the footer of the page and
+                  have a similar parallax effect as the header. It seemed like it would be a nice way to wrap the page up. When it came down to it, the overlapping layers didn't move in the way I wanted. The layers in the header rely on visual
+                  obstruction of the horizon to create a parallax effect. For this one, the layers did not overlap on the horizon so the effect wasn't the same. Instead of scrapping this piece, I decided to make the whole image as a background
+                  parallax image for this section.</p>
+
+                <h2>Cocoa</h2>
+                <div style="width: 100%; height: 1px; background-color: #ddd; border-radius: 3px; margin-bottom: 15px;"></div>
+                <p>The little hot cocoa at the bottom is using <a href="https://github.com/jdan/isomer">isomerjs</a>.</p>
+                <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="wQgQro" data-user="joshsalazar"
+                  style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                  <span>See the Pen <a href="https://codepen.io/joshsalazar/pen/wQgQro">
+                      #codevember - 14 - Coffee</a> by Joshua Salazar (<a href="https://codepen.io/joshsalazar">@joshsalazar</a>)
+                    on <a href="https://codepen.io">CodePen</a>.</span>
+                </p>
+                <p style="margin-top: 15px;">I made this a while ago so I could learn about the Isomer library. I love 3D animation and have spent a lot of time doing game, 3D, and XR design and I felt like that aspect of my personality was missing
+                  from this page. Having it at the bottom, I felt, was a nice finishing touch.</p>
+                <p>Up Next: A dev blog of how I created this dev blog. <em>(Just kidding)</em></p>
+                <p><strong>Thanks for reading!</strong></p>
+                <div style="margin-top: 30px"></div>
+              </div>
+              <div class="col-md-2 ">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+        </div>
+      </div>
+    </div>
+  </div>
+  <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+
+</body>
+
+
+
+</html>

@@ -96,10 +96,9 @@ $("#canvas").on('mousedown', function(e) {
     var deltaMove = {
       x: e.offsetX - previousMousePosition.x
     };
-    console.log(deltaMove.x);
 
     if (isDragging) {
-      sphere.rotation.y += deltaMove.x * .001;
+      sphere.rotation.y += deltaMove.x * .004;
     }
 
     previousMousePosition = {
