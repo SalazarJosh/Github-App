@@ -282,7 +282,7 @@ const animate = function() {
   requestAnimationFrame(animate);
 
   if (!isDragging) {
-    //sphere.rotation.y += 0.001;
+    sphere.rotation.y += 0.001;
   }
 
   overlaySphere.rotation.y = sphere.rotation.y;
