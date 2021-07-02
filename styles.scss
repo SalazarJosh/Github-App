@@ -190,6 +190,21 @@ text {
   overflow: hidden;
 }
 
+.contentArea7 {
+  background-color: #040d21;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+  text-align: center;
+}
+
+.generativeCanvas {
+  width: 100%;
+  height: 300px;
+  position: absolute;
+  left: 0;
+}
+
 .margin-top200 {
   margin-top: 200px;
 }

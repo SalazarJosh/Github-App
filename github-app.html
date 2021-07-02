@@ -142,7 +142,7 @@
             </div>
           </div>
           <div class="col-md-6 gs_reveal gs_reveal_fromRight">
-            <div id="canvas">
+            <div id="globeCanvas">
             </div>
           </div>
         </div>
@@ -169,37 +169,55 @@
       </div>
     </div>
 
-    <div class="contentArea6">
-      <div class="container" style="padding-top: 200px;">
+    <div class="contentArea7">
+      <div class="generativeCanvas">
+        <canvas id="generativeCanvas">
+        </canvas>
+      </div>
+      <div class="container" style="height: 300px;">
         <div class="row">
           <div class="col-md-12 gs_reveal gs_reveal_fromLeft">
-            <div class="introText" style="color: #fff; padding-right: 50px; text-align: center; margin-bottom: 50px;">
-              <span style="font-size:1.7rem;">Thanks for taking the time to check this out!</span>
+            <div class="introText" style="color: #fff; padding: 50px 0;">
+              BONUS: Generative art
               <br />
-              <br />
-              <small><a href="BuildBlog.html" style="color:#dec3af; font-size: 1.3rem;">See how I built this page</a></small>
-              <br />
-              <br />
-              <small><a href="https://github.com/indijosh/Github-App" style="color:#dec3af; font-size: 1.3rem;">View the GitHub repo</a></small>
+              <div style="font-size: 1rem; margin: 10px 0;">Click to regenerate</div>
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-12 gs_reveal gs_reveal_fromRight">
-            <div class="introText" style="color:#738aaa; font-style: italic; font-size: 1.7rem; text-align: center;">
-              <a href="mailto:joshua.a.salazar@gmail.com" style="color:#dec3af; "><i class="fas fa-envelope"></i></a> <small>joshua.a.salazar@gmail.com</small>
-              <br />
-              <a href="https://www.linkedin.com/in/joshuasalazar1/" style="color:#dec3af; margin-right: 20px;"><i class="fab fa-linkedin"></i></a>
-              <a href="https://codepen.io/joshsalazar" style="color:#dec3af; margin-right: 20px;"><i class="fab fa-codepen"></i></a>
-              <a href="https://joshuasalazar.net" style="color:#dec3af;margin-right: 20px;"><i class="fas fa-globe"></i></a>
-              <a href="https://github.com/indijosh" style="color:#dec3af"><i class="fab fa-github"></i></a>
-            </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="contentArea6">
+    <div class="container" style="padding-top: 200px;">
+      <div class="row">
+        <div class="col-md-12 gs_reveal gs_reveal_fromLeft">
+          <div class="introText" style="color: #fff; text-align: center; margin-bottom: 50px;">
+            <span style="font-size:1.7rem;">Thanks for taking the time to check this out!</span>
+            <br />
+            <br />
+            <small><a href="BuildBlog.html" style="color:#dec3af; font-size: 1.3rem;">See how I built this page</a></small>
+            <br />
+            <br />
+            <small><a href="https://github.com/indijosh/Github-App" style="color:#dec3af; font-size: 1.3rem;">View the GitHub repo</a></small>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-12" style="padding:100px 0">
-            <canvas width="800" height="200" id="coffee" style="padding-left:0;padding-right:0;margin-left:auto;margin-right:auto;display:block;"></canvas>
+      </div>
+      <div class="row">
+        <div class="col-md-12 gs_reveal gs_reveal_fromRight">
+          <div class="introText" style="color:#738aaa; font-style: italic; font-size: 1.7rem; text-align: center;">
+            <a href="mailto:joshua.a.salazar@gmail.com" style="color:#dec3af; "><i class="fas fa-envelope"></i></a> <small>joshua.a.salazar@gmail.com</small>
+            <br />
+            <a href="https://www.linkedin.com/in/joshuasalazar1/" style="color:#dec3af; margin-right: 20px;"><i class="fab fa-linkedin"></i></a>
+            <a href="https://codepen.io/joshsalazar" style="color:#dec3af; margin-right: 20px;"><i class="fab fa-codepen"></i></a>
+            <a href="https://joshuasalazar.net" style="color:#dec3af;margin-right: 20px;"><i class="fas fa-globe"></i></a>
+            <a href="https://github.com/indijosh" style="color:#dec3af"><i class="fab fa-github"></i></a>
           </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12" style="padding:100px 0">
+          <canvas width="800" height="200" id="coffee" style="padding-left:0;padding-right:0;margin-left:auto;margin-right:auto;display:block;"></canvas>
         </div>
       </div>
     </div>
@@ -212,12 +230,9 @@
   </script>
   <script src="three.js"></script>
   <script src="globe.js"></script>
-
+  <script src="generative-art.js"></script>
   <script src="coffee.js"></script>
-
   <script src="scripts.js"></script>
-
-
 </body>
 
 </html>

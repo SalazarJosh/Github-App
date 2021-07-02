@@ -1,4 +1,4 @@
-container = document.getElementById('canvas');
+container = document.getElementById('globeCanvas');
 
 //SETUP SCENE
 const scene = new THREE.Scene();
