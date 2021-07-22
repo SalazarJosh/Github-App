@@ -183,6 +183,73 @@ text {
   background-color: rgba(51,37,52,.5);
 }
 
+.strikeText {
+  position: relative;
+  display: inline-block;
+}
+
+.iconAnimation:hover {
+  & > i {
+    animation: iconAnim 0.3s forwards;
+    animation-iteration-count: 1;
+  }
+}
+@keyframes iconAnim {
+  49% {
+    color: #dec3af;
+  }
+
+  50% {
+    color: #fff;
+    transform: rotateY(90deg);
+  }
+
+  100% {
+    color: #fff;
+    transform: rotateY(0deg);
+  }
+}
+
+.strikeText::before {
+  content: '';
+  border-bottom: 2px solid;
+  border-color: #fff;
+  width: 100%;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  animation: savingBarAnimation 4s linear infinite;
+}
+@keyframes savingBarAnimation {
+  0% {
+    border-color: #ffae8b;
+  }
+
+  25% {
+    border-color: #bef2ff;
+  }
+
+  40% {
+    border-color: #bef2ff;
+  }
+
+  45% {
+    border-color: #ffae8b;
+  }
+
+  50% {
+    border-color: #4a4e69;
+  }
+
+  95% {
+    border-color: #4a4e69;
+  }
+
+  100% {
+    border-color: #ffae8b;
+  }
+}
+
 .contentArea6 {
   background-color: #192d42;
   position: relative;

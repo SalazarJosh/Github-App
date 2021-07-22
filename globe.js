@@ -215,11 +215,11 @@ var previousMousePosition = {
   x: 0,
   y: 0
 };
-$("#canvas").on('mousedown', function(e) {
+$("#globeCanvas").on('mousedown', function(e) {
     isDragging = true;
   })
   .on('mousemove', function(e) {
-    //console.log(e);
+    console.log("hi");
     var deltaMove = {
       x: e.offsetX - previousMousePosition.x
     };
@@ -249,14 +249,15 @@ camera.position.z = 6;
 
 var renderCount = 0;
 var currentGrowing = 0;
-var tubes =[tube1,tube2,tube3,tube4,tube5,tube6,tube7,tube8]
+var tubes = [tube1, tube2, tube3, tube4, tube5, tube6, tube7, tube8]
 
-function GrowTube(index, renderCount){
+function GrowTube(index, renderCount) {
+  renderCount = Math.ceil(renderCount / 3) * 3
   tubes[index].setDrawRange(0, renderCount)
-  if(index > 2){
+  if (index > 2) {
+    console.log(renderCount)
     tubes[index - 3].setDrawRange(renderCount, 10000)
-  }
-  else{
+  } else {
     tubes[(tubes.length - 3) + index].setDrawRange(renderCount, 10000)
   }
 }
@@ -266,15 +267,12 @@ const animate = function() {
   if (renderCount < 10000) {
     renderCount += 80;
     GrowTube(currentGrowing, renderCount);
-  }
-
-  else{
+  } else {
     renderCount = 0;
 
-    if(currentGrowing >= tubes.length - 1){
+    if (currentGrowing >= tubes.length - 1) {
       currentGrowing = 0;
-    }
-    else{
+    } else {
       currentGrowing++;
     }
   }

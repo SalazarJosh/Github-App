@@ -71,7 +71,7 @@ function setup() {
   clearTimeout(timeoutFunction);
   context.clearRect(0, 0, size, canvas.height);
 
-  shape = Math.floor(Math.random() * 4);;
+  shape = Math.floor(Math.random() * 5);;
 
   if (shape == 1) {
     fillStroke = Math.floor(Math.random() * 2);
@@ -89,7 +89,6 @@ function setup() {
   color2 = "rgb(" + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + ", 200)";
 
   interpolatedColorArray = interpolateColors(color1, color2, size / step);
-  console.log(interpolatedColorArray);
   myLoop();
 }
 
@@ -176,11 +175,26 @@ function myLoop() {
             context.arc(x + step / 2, y + step / 2, Math.random() * (step / 2), 0, 2 * Math.PI);
             fillShape();
           }
-        } else {
+        } else if (shape == 3) {
           context.beginPath();
           let setScale = Math.random() * (step * 2);
           context.rect(x, y, setScale, setScale);
           fillShape();
+        } else {
+          context.beginPath();
+          let verticalOrHorizontal = Math.floor(Math.random() * 2);
+          let locX, locY;
+          if (verticalOrHorizontal == 0) {
+            locX = Math.ceil(Math.floor(Math.random() * 5) / 10) * 10;
+            if (locX != 50)
+              context.rect(x + locX, y, step - locX, step);
+            fillShape()
+          } else {
+            locY = Math.ceil(Math.floor(Math.random() * 5) / 10) * 10;
+            if (locY != 50)
+              context.rect(x, y + locY, step, step - locY)
+            fillShape()
+          }
         }
 
         y += step;
